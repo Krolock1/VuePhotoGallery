@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 import router from './router';
 
 import { IonicVue } from '@ionic/vue';
@@ -22,11 +22,14 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
 const app = createApp(App)
-  .use(IonicVue)
-  .use(router);
-  
+    .use(IonicVue)
+    .use(router);
+
+defineCustomElements(window);
+
 router.isReady().then(() => {
-  app.mount('#app');
+    app.mount('#app');
 });

@@ -2,20 +2,22 @@
   <ion-page>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1" href="/tabs/tab1">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+        <ion-tab-button tab="search" href="/tabs/search">
+          <ion-icon :icon="search" />
+          <ion-label>Suche</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-tab-button tab="list" href="/tabs/list">
+          <ion-icon :icon="list" />
+          <ion-label>Hotels</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="photos" href="/tabs/photos">
           <ion-icon :icon="images" />
           <ion-label>Photos</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="square" />
-          <ion-label>Tab 3</ion-label>
-        </ion-tab-button>
+
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -23,7 +25,7 @@
 
 <script lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage } from '@ionic/vue';
-import { square, triangle, images } from 'ionicons/icons';
+import { square, triangle, images, search, list  } from 'ionicons/icons';
 
 export default {
     name: 'Tabs',
@@ -32,6 +34,8 @@ export default {
         return {
             images,
             square,
+            search,
+            list,
             triangle,
         };
     },
